@@ -5,7 +5,7 @@ This package provides comprehensive tools for detecting, transforming, and audit
 personally identifiable information (PII) across various data formats and sources.
 """
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 __author__ = "ay-mich"
 
 

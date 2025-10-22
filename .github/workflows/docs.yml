@@ -26,11 +26,12 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Install dependencies
+      - name: Install dependencies (with pandas extra)
         run: |
           python -m pip install --upgrade pip
           pip install pdoc
-          pip install -e .
+          # install project with optional pandas extra to satisfy runtime imports
+          pip install -e .[pandas]
 
       - name: Generate documentation
         run: |

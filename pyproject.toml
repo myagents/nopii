@@ -1,5 +1,5 @@
 [project]
-name = "no-pii"
+name = "nopii"
 version = "0.1.1"
 description = "A batteries-included Python toolkit for detecting, transforming, masking, pseudonymizing, and auditing PII across data engineering workflows"
 readme = "README.md"

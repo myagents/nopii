@@ -35,7 +35,7 @@ Then open http://localhost:8000 in your browser.
 ## Documentation URL
 
 Once set up, your documentation will be available at:
-`https://yourusername.github.io/nopii/`
+`https://ay-mich.github.io/nopii/nopii.html`
 
 ## Adding Documentation
 

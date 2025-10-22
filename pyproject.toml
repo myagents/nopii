@@ -1,6 +1,6 @@
 [project]
-name = "nopii"
-version = "0.1.1"
+name = "no-pii"
+version = "0.1.2"
 description = "A batteries-included Python toolkit for detecting, transforming, masking, pseudonymizing, and auditing PII across data engineering workflows"
 readme = "README.md"
 authors = [
@@ -53,7 +53,7 @@ no-pii = "nopii.cli:main"
 
 [project.urls]
 Homepage = "https://github.com/ay-mich/nopii"
-Documentation = "https://nopii.readthedocs.io"
+Documentation = "https://ay-mich.github.io/nopii/nopii.html"
 Repository = "https://github.com/ay-mich/nopii"
 Issues = "https://github.com/ay-mich/nopii/issues"
 

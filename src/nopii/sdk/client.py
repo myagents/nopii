@@ -5,6 +5,8 @@ This module provides the high-level NoPIIClient interface for easy PII detection
 and transformation operations.
 """
 
+from __future__ import annotations
+
 from pathlib import Path
 from typing import Dict, List, Optional, Union, Any
 

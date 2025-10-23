@@ -2,6 +2,8 @@
 SDK wrapper for the Scanner class.
 """
 
+from __future__ import annotations
+
 from pathlib import Path
 from typing import Dict, List, Optional, Union, Any
 

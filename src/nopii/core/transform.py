@@ -5,6 +5,7 @@ Core transform functionality for transforming PII in data.
 from __future__ import annotations
 
 import time
+import logging
 from datetime import datetime
 from typing import Any, Dict, List, Optional
 
@@ -79,6 +80,42 @@ class Transform:
 
         # Apply transformations (grouped per cell to avoid span drift)
         samples: Dict[str, List[str]] = {}
+
+        # Ensure columns with findings can safely accept string replacements.
+        # This avoids FutureWarning/TypeError when assigning strings into
+        # non-object dtypes (e.g., datetime64[ns], numeric).
+        if pd is not None and hasattr(df_transform, "dtypes"):
+            try:
+                # Only cast columns that will be modified (i.e., not allowed by policy)
+                finding_columns = set()
+                for f in scan_result.findings:
+                    if (
+                        hasattr(df_transform, "columns")
+                        and f.column in df_transform.columns
+                        and not self.policy.is_allowed(dataset_name, f.type)
+                    ):
+                        finding_columns.add(f.column)
+                for col in finding_columns:
+                    dtype = df_transform[col].dtype
+                    # Cast only if not already an object/string dtype
+                    if not (
+                        pd.api.types.is_object_dtype(dtype)
+                        or pd.api.types.is_string_dtype(dtype)
+                    ):
+                        # Prefer pandas' nullable string dtype when available
+                        try:
+                            df_transform[col] = df_transform[col].astype("string")
+                        except Exception:
+                            # Fallback to plain object strings
+                            df_transform[col] = (
+                                df_transform[col].astype(object).astype(str)
+                            )
+            except Exception as e:
+                # Proceed without pre-casting; log for diagnostics.
+                logging.debug(
+                    "nopii.transform: skipping pre-cast for columns due to error: %s",
+                    e,
+                )
 
         cell_map: Dict[tuple[int, str], List[Finding]] = {}
         for f in scan_result.findings:

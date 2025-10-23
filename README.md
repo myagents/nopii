@@ -1,6 +1,12 @@
 # NoPII
 
+[![PyPI version](https://badge.fury.io/py/nopii.svg)](https://badge.fury.io/py/nopii)
+[![Python versions](https://img.shields.io/pypi/pyversions/nopii.svg)](https://pypi.org/project/nopii/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 A Python package for detecting, transforming, and auditing Personally Identifiable Information (PII) in your data. Supports multiple data sources including CSV, JSON, Parquet, and pandas DataFrames with policy-driven configuration.
+
+👉 Examples: [nopii-examples](https://github.com/ay-mich/nopii-examples)
 
 ## Features
 
@@ -16,13 +22,13 @@ A Python package for detecting, transforming, and auditing Personally Identifiab
 - **Masking**: Replace characters with asterisks or custom symbols while preserving format (e.g., `john@example.com` → `****@example.com`)
 - **Redacting**: Replace entire PII values with placeholder text (e.g., `john@example.com` → `[REDACTED]`)
 - **Hashing**: One-way cryptographic transformation using SHA-256 or other algorithms, with optional salt for security
-- **Tokenization**: Replace with reversible tokens for data analysis while maintaining referential integrity across datasets
+- **Tokenization**: Replace with reversible tokens for data analysis while maintaining referential integrity across datasetsü
 - **Nullification**: Replace with null/empty values for complete data removal
 
 ### 📊 **Data Processing**
 
 - **Pandas DataFrames**: Process tabular data with vectorized operations for performance, supporting column-wise scanning and transformation
-- **File Formats**: Direct support for CSV, JSON, Parquet, and Excel files with streaming for large datasets
+- **File Formats**: Direct support for CSV, JSON, Parquet, and Excel files with streaming for large datasets¨
 - **Text & Dictionaries**: Scan and transform plain text strings and Python dictionaries for flexible data handling
 - **Memory Efficient**: Streaming processing for large files to avoid loading entire datasets into memory
 

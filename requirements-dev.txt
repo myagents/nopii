@@ -242,9 +242,9 @@ cryptography==46.0.3 ; platform_machine != 'ppc64le' and platform_machine != 's3
     --hash=sha256:e5bf0ed4490068a2e72ac03d786693adeb909981cc596425d09032d372bcc849 \
     --hash=sha256:ef639cb3372f69ec44915fafcd6698b6cc78fbe0c2ea41be867f6ed612811963
     # via secretstorage
-cyclonedx-python-lib==9.1.0 \
-    --hash=sha256:55693fca8edaecc3363b24af14e82cc6e659eb1e8353e58b587c42652ce0fb52 \
-    --hash=sha256:86935f2c88a7b47a529b93c724dbd3e903bc573f6f8bd977628a7ca1b5dadea1
+cyclonedx-python-lib==11.3.0 \
+    --hash=sha256:08094495d0cbbaddbe605f60f6e48ae98d29263386d7926df83ffe9bdea55f78 \
+    --hash=sha256:ee3135a59ead90397339ea585b341a7ea9c53e734ad13f48a9865cfcf0f1139a
     # via pip-audit
 defusedxml==0.7.1 \
     --hash=sha256:1bb3032db185915b62d7c6209c5a8792be6a32ab2fedacc84e01b52c51aa3e69 \

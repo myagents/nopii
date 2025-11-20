@@ -27,7 +27,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install uv
           uv build
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         with:
           name: dist
           path: dist/*

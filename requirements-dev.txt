@@ -307,9 +307,9 @@ id==1.5.0 \
     --hash=sha256:292cb8a49eacbbdbce97244f47a97b4c62540169c976552e497fd57df0734c1d \
     --hash=sha256:f1434e1cef91f2cbb8a4ec64663d5a23b9ed43ef44c4c957d02583d61714c658
     # via twine
-identify==2.6.15 \
-    --hash=sha256:1181ef7608e00704db228516541eb83a88a9f94433a8c80bb9b5bd54b1d81757 \
-    --hash=sha256:e4f4864b96c6557ef2a1e1c951771838f4edc9df3a72ec7118b338801b11c7bf
+identify==2.6.18 \
+    --hash=sha256:873ac56a5e3fd63e7438a7ecbc4d91aca692eb3fefa4534db2b7913f3fc352fd \
+    --hash=sha256:8db9d3c8ea9079db92cafb0ebf97abdc09d52e97f4dcf773a2e694048b7cd737
     # via pre-commit
 idna==3.11 \
     --hash=sha256:771a87f49d9defaf64091e6e6fe9c18d4833f140bd19464795bc32d966ca37ea \
